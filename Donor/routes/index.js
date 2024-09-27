@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getUserData, getDonatables } from './db_connect.js'
+import { getUserData, getDonatables } from './../db_connect.js'
 import auth from './auth.js';
 
 const router = Router();

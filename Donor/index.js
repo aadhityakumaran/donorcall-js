@@ -1,6 +1,7 @@
 import express from 'express';
 import env from 'dotenv';
 import routes from './routes/index.js';
+import cookieParser from 'cookie-parser';
 
 env.config();
 

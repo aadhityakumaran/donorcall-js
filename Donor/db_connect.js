@@ -1,6 +1,8 @@
 import mysql from 'mysql2';
-import config from './db_config';
 import crypto from 'crypto';
+import env from 'dotenv';
+
+env.config();
 
 const config = {
     host: process.env.DB_HOST || "localhost",
@@ -59,7 +61,7 @@ function hashPassword(password) {
     return hash.digest('hex');
 }
 
-export default {
+export {
     isValidLogin,
     registerUser,
     getUserData,

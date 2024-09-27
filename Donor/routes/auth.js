@@ -1,4 +1,6 @@
 import { Router } from "express";
+import { isValidLogin, registerUser } from './../db_connect.js';
+import jwt from 'jsonwebtoken';
 
 const router = Router();
 
@@ -40,7 +42,9 @@ router.get('/signup', (req, res) => {
 
 router.post('/signup', async (req, res) => {
     const { password, name, phone, blood_group } = req.body;
-    await registerUser(password, name, phone, blood_group);
+    const donor_id = await registerUser(password, name, phone, blood_group);
+    const token = jwt.sign({ donor_id }, process.env.SECRET_KEY);
+    res.cookie("token", token, { httpOnly: true });
     res.redirect('/');
 });
 

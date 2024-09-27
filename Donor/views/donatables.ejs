@@ -1,1 +1,92 @@
-<!-- HTML DOCUMENT THAT SHOWS PATIENTS THE USER CAN DONATE BLOOD TO-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligible Patients for Blood Donation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#b15b5b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .patients-container {
+            background-color: #ba8686;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .patient {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .patient p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .patient p.title {
+            font-weight: bold;
+            color: #333;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid;
+            background-color:#670505;
+            color: rgb(228, 202, 202);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .back-btn:hover {
+            background-color: #a7282a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="patients-container">
+        <h2>Patients You Can Donate Blood To</h2>
+        
+        <div class="patient">
+            <p class="title">Patient Name: Jane Smith</p>
+            <p>Blood Type: A+</p>
+            <p>Hospital: City Hospital</p>
+            <p>Urgency: High</p>
+        </div>
+
+        <div class="patient">
+            <p class="title">Patient Name: John Doe</p>
+            <p>Blood Type: O-</p>
+            <p>Hospital: General Care Clinic</p>
+            <p>Urgency: Medium</p>
+        </div>
+
+        <div class="patient">
+            <p class="title">Patient Name: Mary Johnson</p>
+            <p>Blood Type: AB+</p>
+            <p>Hospital: Green Valley Medical</p>
+            <p>Urgency: Low</p>
+        </div>
+
+        <a href="/" class="back-btn">Go Back</a>
+    </div>
+
+</body>
+</html>

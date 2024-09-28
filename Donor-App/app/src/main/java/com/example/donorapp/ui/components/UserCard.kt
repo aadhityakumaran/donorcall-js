@@ -11,6 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.example.donorapp.ui.theme.appSecondary
+import com.example.donorapp.ui.theme.appTertiary
 
 @Composable
 fun UserCard(
@@ -26,15 +28,17 @@ fun UserCard(
         .fillMaxWidth()
         .padding(top = 8.dp, start = 8.dp, end = 8.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.Blue)
+        colors = CardDefaults.cardColors(containerColor = appTertiary)
     )
     {
-        Column(modifier = modifier.padding(16.dp).fillMaxWidth()) {
-            Text(text = "Name\n$name", fontWeight = FontWeight.Bold)
-            Text(text = "Phone Number\n$phone", fontWeight = FontWeight.Bold)
-            Text(text = "Donor ID\n$donorId", fontWeight = FontWeight.Bold)
-            Text(text = "Blood Group\n$bloodGroup", fontWeight = FontWeight.Bold)
-            Text(text = "Last Donated\n$lastDonationDate", fontWeight = FontWeight.Bold)
+        Column(modifier = modifier
+            .padding(16.dp)
+            .fillMaxWidth()) {
+            Text(text = "Name\n$name", fontWeight = FontWeight.Bold, color = Color.Black)
+            Text(text = "Phone Number\n$phone", fontWeight = FontWeight.Bold, color = Color.Black)
+            Text(text = "Donor ID\n$donorId", fontWeight = FontWeight.Bold, color = Color.Black)
+            Text(text = "Blood Group\n$bloodGroup", fontWeight = FontWeight.Bold, color = Color.Black)
+            Text(text = "Last Donated\n$lastDonationDate", fontWeight = FontWeight.Bold, color = Color.Black)
 
         }
     }

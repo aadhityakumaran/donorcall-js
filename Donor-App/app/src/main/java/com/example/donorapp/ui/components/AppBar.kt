@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.donorapp.ui.theme.appPrimary
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -18,13 +19,11 @@ fun AppBar(
             Row {
                 Text(
                     text = title,
-                    color = Color.White,
-                    modifier = Modifier.padding(start = 4.dp)
+                    modifier = Modifier.padding(start = 4.dp),
+                    color = Color.White
                 )
             }
         },
-        colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Color.Green
-        )
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = appPrimary),
     )
 }

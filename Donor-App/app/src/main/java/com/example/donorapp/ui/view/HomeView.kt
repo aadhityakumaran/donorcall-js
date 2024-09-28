@@ -13,6 +13,7 @@ import com.example.donorapp.ui.components.UserCard
 import com.example.donorapp.ui.modifiers.shimmerEffect
 import com.example.donorapp.viewmodel.HomeViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.donorapp.ui.theme.appSecondary
 
 
 @Composable
@@ -27,8 +28,8 @@ fun HomeView(
                 "Home"
             )
         },
-
-        containerColor = Color.White)
+        containerColor = appSecondary
+    )
     {
         LazyColumn(
             modifier = Modifier

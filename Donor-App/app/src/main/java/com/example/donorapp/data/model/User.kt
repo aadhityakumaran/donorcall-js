@@ -10,6 +10,6 @@ data class User(
 
 object userList {
     val user1 = listOf(
-        User("John Doe", "1234567890", "1234", "A+", "12/12/2020")
+        User("Jin Sakai", "What is phone?", "Ghost", "HONOR", "Before DYing")
     )
 }

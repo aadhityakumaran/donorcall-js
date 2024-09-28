@@ -28,7 +28,7 @@ fun HomeView(
             )
         },
 
-        containerColor = Color.Green)
+        containerColor = Color.White)
     {
         LazyColumn(
             modifier = Modifier

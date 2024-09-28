@@ -1,6 +1,5 @@
 package com.example.donorapp.ui.components
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -15,7 +14,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun UserCard(
-    id : String,
+    name : String,
     phone : String,
     donorId : String,
     bloodGroup : String,
@@ -27,15 +26,15 @@ fun UserCard(
         .fillMaxWidth()
         .padding(top = 8.dp, start = 8.dp, end = 8.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White)
+        colors = CardDefaults.cardColors(containerColor = Color.Blue)
     )
     {
         Column(modifier = modifier.padding(16.dp).fillMaxWidth()) {
-            Text(text = id, fontWeight = FontWeight.Bold)
-            Text(text = phone, fontWeight = FontWeight.Bold)
-            Text(text = donorId, fontWeight = FontWeight.Bold)
-            Text(text = bloodGroup, fontWeight = FontWeight.Bold)
-            Text(text = lastDonationDate, fontWeight = FontWeight.Bold)
+            Text(text = "Name\n$name", fontWeight = FontWeight.Bold)
+            Text(text = "Phone Number\n$phone", fontWeight = FontWeight.Bold)
+            Text(text = "Donor ID\n$donorId", fontWeight = FontWeight.Bold)
+            Text(text = "Blood Group\n$bloodGroup", fontWeight = FontWeight.Bold)
+            Text(text = "Last Donated\n$lastDonationDate", fontWeight = FontWeight.Bold)
 
         }
     }

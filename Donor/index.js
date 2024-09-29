@@ -1,6 +1,7 @@
 import express from 'express';
 import env from 'dotenv';
-import routes from './routes/index.js';
+import webPageRoutes from './routes/index.js';
+import apiRoutes from './routes/api/v1/index.js';
 import cookieParser from 'cookie-parser';
 
 env.config();
@@ -13,8 +14,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(express.static('public'));
+app.set('view engine', 'ejs');
 
-app.use(routes);
+app.use('/api/v1', apiRoutes);
+app.use(webPageRoutes);
 
 app.use((req, res) => {
     res.status(404).json({ message: "Page not found" });

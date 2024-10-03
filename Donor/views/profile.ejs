@@ -12,30 +12,25 @@
         <h2>User Details</h2>
         
         <div class="profile-item">
-            <p class="title">Donor name:</p>
-            <p>John Doe</p>
+            <p class="title">Name</p>
+            <p><%= userData.name %></p>
         </div>
         
         <div class="profile-item">
             <p class="title">Phone:</p>
-            <p>1234567890</p>
-        </div>
-
-        <div class="profile-item">
-            <p class="title">Donor id</p>
-            <p>1760</p>
+            <p> <%= userData.phone%> </p>
         </div>
 
         <div class="profile-item">
             <p class="title">Blood Group:</p>
-            <p>O+</p>
+            <p><%= userData.blood %></p>
         </div>
+        
         <div class="profile-item">
             <p class="title">Last Donated:</p>
-            <p>2023-19-10</p>
-        </div>
-
-        <a href="/" class="back-btn">Go Back</a>
+            <p><%= userData.last_don %></p>
+        </div> 
+        <a href ="/" class = "btn"> Matched Patients </a>
     </div>
 
 </body>

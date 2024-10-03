@@ -32,7 +32,7 @@ router.post('/signup', async (req, res) => {
     const donor_id = await registerUser(password, name, phone, blood_group);
     const token = jwt.sign({ donor_id }, process.env.SECRET_KEY);
     res.cookie("token", token, { httpOnly: true });
-    res.redirect('/');
+    res.redirect('/profile');
 });
 
 

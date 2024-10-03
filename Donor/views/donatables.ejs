@@ -10,29 +10,20 @@
 
     <div class="patients-container">
         <h2>Patients You Can Donate Blood To</h2>
-        
-        <div class="patient">
-            <p class="title">Patient Name: Jane Smith</p>
-            <p>Blood Type: A+</p>
-            <p>Hospital: City Hospital</p>
-            <p>Urgency: High</p>
-        </div>
 
-        <div class="patient">
-            <p class="title">Patient Name: John Doe</p>
-            <p>Blood Type: O-</p>
-            <p>Hospital: General Care Clinic</p>
-            <p>Urgency: Medium</p>
-        </div>
+        <% donatables.forEach(patient => { %>
+            <div class="patient">
+                <p>Patient id: <%= patient.patient_id %></p>
+                <p>Name: <%= patient.name %></p>
+                <p>Age: <%=patient.age%> </p>
+                <p>Info: <%=patient.info%></p>
+                <p>Phone: <%=patient.phone%></p>
+                <p>Blood: <%=patient.blood%> </p>
+            </div>
+        <% }) %> 
 
-        <div class="patient">
-            <p class="title">Patient Name: Mary Johnson</p>
-            <p>Blood Type: AB+</p>
-            <p>Hospital: Green Valley Medical</p>
-            <p>Urgency: Low</p>
-        </div>
-
-        <a href="/" class="back-btn">Go Back</a>
+    <a href="/login" class="back-btn">Go Back</a>
+    <a href ="/profile" class = "btn"> Profile </a>
     </div>
 
 </body>

@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
 router.get('/profile', async (req, res) => {
     const donor_id = req.token.donor_id;
     const userData = await getUserData(donor_id);
+    userData.donor_id = donor_id;
     res.render('profile.ejs', { userData });
 });
 

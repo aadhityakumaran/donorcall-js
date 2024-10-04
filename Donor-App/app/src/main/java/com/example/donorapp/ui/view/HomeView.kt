@@ -52,7 +52,7 @@ fun HomeView(
                 items(users.size) { index ->
                     UserCard(
                         users[index].name,
-                        users[index].phoneNumber,
+                        users[index].phone,
                         users[index].donorId,
                         users[index].bloodGroup,
                         users[index].lastDonationDate

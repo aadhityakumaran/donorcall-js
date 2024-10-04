@@ -17,10 +17,10 @@ class HomeViewModel : ViewModel() {
     val userDetails: List<User> by _userDetails
 
     init {
-        fetchParticipants()
+        fetchUserDetails()
     }
 
-    private fun fetchParticipants() {
+    private fun fetchUserDetails() {
         viewModelScope.launch {
             isLoading = true
             val users = HomeRepository.getUserDetails()
